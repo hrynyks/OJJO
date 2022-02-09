@@ -1,0 +1,107 @@
+.mailing {
+    padding: 100px 0 120px;
+    background: url(/src/assets/images/mailing-bg.jpg) no-repeat center/cover;
+
+    &__title {
+        &-sml {
+            font-size: toRem(21);
+            color: $light-color;
+            display: block;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        font-family: 'Noto Serif',
+        serif;
+        font-size: toRem(30);
+        color: $light-color;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+
+        @include a (tablet) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__item {
+        font-size: toRem(18);
+        color: $light-color;
+        padding-left: 37px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(/src/assets/images/mailing-icon.png);
+            width: 17px;
+            height: 17px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__form {
+        &-wrap {
+            max-width: 448px;
+            width: 100%;
+            border: 1px solid $light-color;
+            padding: 15px;
+            background-color: transparent;
+        }
+
+        max-width: 418px;
+        width: 100%;
+        background-color: $light-color;
+        padding: 20px 22px;
+        display: flex;
+        justify-content: space-between;
+
+        @include a (mobile) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+
+    &__input {
+        width: 200px;
+        border: 1px solid #D6D6D6;
+        padding: 15px 20px;
+
+        &::placeholder {
+            font-size: toRem(14);
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(51, 51, 51, 0.5);
+        }
+    }
+
+    &__btn {
+        font-size: toRem(14);
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $light-color;
+        background-color: $dark-color;
+        text-align: center;
+        width: 159px;
+        line-height: 45px;
+        border: 1px solid $light-color;
+    }
+}

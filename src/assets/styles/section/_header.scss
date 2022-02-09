@@ -1,0 +1,55 @@
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 25px;
+
+    &-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 125px;
+
+        @include a (laptop) {
+            gap: 80px;
+        }
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__item {
+        &-link {
+            font-size: toRem(14);
+            color: $light-color;
+
+            &:hover {
+                color: $dark-color;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        &-item {
+            font-size: toRem(14);
+            color: $light-color;
+            white-space: nowrap;
+
+            &:hover {
+                color: $dark-color;
+            }
+        }
+    }
+}

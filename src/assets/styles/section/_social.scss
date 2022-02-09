@@ -1,0 +1,92 @@
+.social {
+    padding-bottom: 150px;
+
+    &__title {
+        &-sml {
+            font-size: toRem(21);
+            display: block;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        font-family: 'Noto Serif',
+        serif;
+        font-size: toRem(30);
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        &-1 {
+            max-width: 555px;
+            width: 100%;
+            background: url(/src/assets/images/social-item-1.jpg) no-repeat center/cover;
+            min-height: 300px;
+            position: relative;
+        }
+
+        &-img-1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &-wrap {
+            display: flex;
+            max-width: 555px;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &-2 {
+            max-width: 278px;
+            width: 100%;
+            background: url(/src/assets/images/social-item-2.jpg) no-repeat center/cover;
+            min-height: 300px;
+        }
+
+        &-3 {
+            max-width: 277px;
+            width: 100%;
+            background: url(/src/assets/images/social-item-3.jpg) no-repeat center/cover;
+            min-height: 300px;
+        }
+
+        &-4 {
+            max-width: 278px;
+            width: 100%;
+            background: url(/src/assets/images/social-item-4.jpg) no-repeat center/cover;
+            min-height: 300px;
+        }
+
+        &-5 {
+            max-width: 277px;
+            width: 100%;
+            background: url(/src/assets/images/social-item-5.jpg) no-repeat center/cover;
+            min-height: 300px;
+        }
+
+        &-6 {
+            max-width: 555px;
+            width: 100%;
+            background: url(/src/assets/images/social-item-6.jpg) no-repeat center/cover;
+            min-height: 300px;
+            position: relative;
+        }
+
+        &-img-2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

@@ -1,0 +1,128 @@
+.here {
+    padding: 100px 0;
+
+    &__title {
+        &-sml {
+            font-size: toRem(21);
+            display: block;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        font-family: 'Noto Serif',
+        serif;
+        font-size: toRem(30);
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &__links {
+        display: grid;
+        grid-template-columns: repeat(6, 165px);
+        justify-content: center;
+        gap: 18px;
+        margin-bottom: 55px;
+
+        @include a (laptop) {
+            grid-template-columns: repeat(3, 165px);
+        }
+
+        @include a (tablet) {
+            grid-template-columns: repeat(2, 165px);
+        }
+
+        @include a (mobile) {
+            grid-template-columns: 165px;
+        }
+
+        &-item {
+            position: relative;
+
+            &:hover .here__links-border {
+                display: none;
+            }
+
+            &:hover .here__links-link {
+                line-height: 61px;
+                background-color: $dark-color;
+                color: $light-color;
+            }
+        }
+
+        &-link {
+            font-size: toRem(18);
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: $dark-color;
+            background-color: #F9F9F9;
+            width: 165px;
+            line-height: 55px;
+            text-align: center;
+            border: 1px solid #D6D6D6;
+        }
+
+        &-border {
+            width: 165px;
+            height: 55px;
+            background-color: #F9F9F9;
+            border: 1px solid #D6D6D6;
+            position: absolute;
+            z-index: -1;
+            top: 6px;
+            left: 6px;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        justify-content: center;
+        place-items: center;
+        gap: 30px;
+
+        @include a (laptop) {
+            grid-template-columns: repeat(2, 350px);
+        }
+
+        @include a (tablet) {
+            grid-template-columns: minmax(320px, 350px)
+        }
+    }
+
+    &__item {
+        font-size: toRem(24);
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 222px 0 30px;
+        max-width: 350px;
+        width: 100%;
+        text-align: center;
+        color: $light-color;
+
+        &-1 {
+            background: url(/src/assets/images/here-item-1.jpg) no-repeat center/cover;
+        }
+
+        &-2 {
+            background: url(/src/assets/images/here-item-2.jpg) no-repeat center/cover;
+        }
+
+        &-3 {
+            background: url(/src/assets/images/here-item-3.jpg) no-repeat center/cover;
+        }
+
+        &-4 {
+            background: url(/src/assets/images/here-item-4.jpg) no-repeat center/cover;
+        }
+
+        &-5 {
+            background: url(/src/assets/images/here-item-5.jpg) no-repeat center/cover;
+        }
+
+        &-6 {
+            background: url(/src/assets/images/here-item-6.jpg) no-repeat center/cover;
+        }
+    }
+}

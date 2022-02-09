@@ -1,0 +1,47 @@
+.our {
+    padding: 100px 0;
+    background: url(/src/assets/images/our-bg.jpg) no-repeat center/cover;
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        &-sml {
+            font-size: toRem(21);
+            color: $light-color;
+            margin-bottom: 15px;
+        }
+
+        font-family: 'Noto Serif',
+        serif;
+        font-size: toRem(30);
+        color: $light-color;
+        margin-bottom: 45px;
+    }
+
+    &__descr {
+        font-size: toRem(18);
+        line-height: 140%;
+        color: $light-color;
+        max-width: 730px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &__btn {
+        font-size: toRem(18);
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $dark-color;
+        width: 224px;
+        line-height: 51px;
+        text-align: center;
+        border: 1px solid $dark-color;
+        background-color: $light-color;
+    }
+}

@@ -1,0 +1,69 @@
+.hero {
+    position: relative;
+    background: url(/src/assets/images/hero-bg.jpg) no-repeat center/cover;
+    padding: 600px 0 30px;
+
+    &__title {
+        font-family: 'Noto Serif', serif;
+        font-size: toRem(36);
+        text-align: center;
+        color: $light-color;
+        margin-bottom: 50px;
+    }
+
+    &__btn {
+        font-size: toRem(18);
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $light-color;
+        width: 261px;
+        line-height: 51px;
+        text-align: center;
+        border: 1px solid $light-color;
+        background-color: $dark-color;
+        display: block;
+        margin: 0 auto 80px;
+    }
+
+    &__items {
+        border-top: 1px solid $light-color;
+        padding-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(6, 160px);
+        justify-content: center;
+        gap: 15px;
+
+        @include a (tablet-xl) {
+            grid-template-columns: repeat(3, 160px);
+            gap: 30px;
+        }
+
+        @include a (tablet) {
+            grid-template-columns: repeat(2, 160px);
+        }
+
+        @include a (mobile) {
+            grid-template-columns: 160px;
+        }
+    }
+
+    &__item {
+        border-right: 1px solid $light-color;
+        padding-right: 15px;
+
+        &:last-child {
+            border: none;
+        }
+
+        &:nth-child(3) {
+            @include a (tablet-xl) {
+                border: none;
+            }
+        }
+
+        @include a (tablet) {
+            border: none;
+        }
+    }
+}
